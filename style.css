@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200&family=Fira+Sans:wght@100&family=Lato:wght@100;300;400;700&family=Poppins:wght@100;300&family=Titillium+Web:wght@200;300;400&family=Ubuntu&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('img/TodoBG.jpg');
+    background-size: cover;
+}
+
+header {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+h1 {
+    font-weight: 900;
+    margin: 1em;
+    color: #FF9292;
+    font-size: 5em;
+}
+
+form {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+#new-task-submit {
+    margin: 1em;
+    padding: 0.5em;
+    border: none;
+    background-color: #f6f0c4;
+    background-image: linear-gradient(315deg, #f6f0c4 0%, #d99ec9 74%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 0.8em;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+    background-color: #2C3333;
+}
+
+#newTask {
+    background-color: #2B2B2B;
+    border: none;
+    border-radius: 5px;
+    width: 90%;
+    display: inline;
+    height: 50px;
+    color: white;
+    padding: 0.3em;
+}
+
+@media screen and (max-width: 500px) {
+    form {
+        width: 100%;
+    }
+    body {
+        background-image: url('img/TodoBG.jpg');
+        background-size: cover;
+        margin-left: 2em;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+    }
+    h1 {
+        font-size: 3.5em;
+    }
+}
+
+button {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+main {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-list h2 {
+    font-weight: 900;
+    margin: 1em;
+    color: #FF9292;
+    font-size: 2em;
+}
+
+.task .content {
+    flex: 1 1 0%;
+}
+
+.task .content .text {
+    color: white;
+    width: 250%;
+    height: 40px;
+    padding: 0.2em;
+    display: block;
+    transition: 0.9s;
+    background-color: #3A3845;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 0.1em;
+    align-items: center;
+    justify-content: center;
+}
+
+.task .actions {
+    display: flex;
+    margin: 0 8rem;
+}
+
+.task .actions button {
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+.task .actions button:hover {
+    opacity: 0.8;
+}
+
+.task .actions button:active {
+    opacity: 0.6;
+}
+
+.task .actions .edit {
+    background: #219F94;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.task .actions .delete {
+    color: crimson;
+}
+
+@media screen and (max-width: 500px) {
+    .task .actions {
+        margin: 0;
+    }
+    .task .content .text {
+        width: 100%;
+    }
+    .task .actions button {
+        margin: 0 0.3rem;
+    }
+}
